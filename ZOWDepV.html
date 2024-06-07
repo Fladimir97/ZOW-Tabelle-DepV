@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Analyseauswertung - Deponieverordnung (DepV)</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="printBericht.css" id="printsheet">
+	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+	<script src="graphicAusw.js"></script>
+
+</head>
+
+<body  style="padding-left:2%">
+	
+
+	<div id="StammdatenHeadline"></div>
+	<div class="DontPrint">
+	<h1>ZOW-Tabelle nach den Vorgaben der Deponieverordnung (DepV)</h1>
+	<h2>Stammdaten</h2>
+
+
+	<div class="StammdatenContainer">
+	<div class="StammdatenContainer">
+
+	<label class="MainOptionsLabel" for="Abfallbezeichnung">Abfallbezeichnung / Herkunft</label>
+	<input class="Stammdatgeninput" id="Abfallbezeichnung"></input>
+
+	<label class="MainOptionsLabel" for="Abfallmenge">Abfallmenge in m³</label>
+	<input class="Stammdatgeninput" id="Abfallmenge" type="number" min="0"></input>
+
+	<label class="MainOptionsLabel" for="Probenahme">Art der Probenahme</label>
+	<select class="StammdatenDropdown" name="Bodenart" id="Probenahme" onchange="ausw()">
+		<option value="0">Haufwerksbeprbung nach LAGA PN-98</option>
+		<option value="1">Schurfbeprobung nach DIN 19698-6</option>
+		<option value="2">Andere / Voruntersuchung</option>
+	</select>
+
+
+	<label class="MainOptionsLabel" for="TOC">Nur natürliche Fremdbestandteile?</label>
+	<select class="StammdatenDropdown" name="TOC" id="TOC" onchange="ausw()">
+		<option value="0">Nein</option>
+		<option value="1">Ja</option>
+
+	</select>
+
+
+	<label class="MainOptionsLabel" for="ZW">Einstufungsrelevante Zordnungswerte</label>
+	<select class="StammdatenDropdown" name="ZW" id="ZW" onchange="ausw()">
+		<option value="0">DK0</option>
+		<option value="I">DKI</option>
+		<option value="II">DKII</option>
+		<option value="III">DKIII</option>
+
+	</select>
+
+
+	<label class="GraphicOptions" for="GO">Grafische Auswertung</label>
+	<select class="StammdatenDropdown" name="GO" id="GO" onchange="graphicAusw()">
+		
+	</select>
+
+
+	</div>
+	<div id='myDiv' style="width:750px;margin-left:100px">
+	</div>
+	</div>
+	</div>
+	<br class="DontPrint">
+
+	<div id="app">
+	</div>
+
+
+	<div class="DontPrint"> <br>
+	<button onclick="ausw()">Auswertung starten</button>
+
+	<button onclick="saveData()">Speichern</button>
+
+	<button onclick="loadData()">Laden</button>
+
+	<select class="DruckDropdown" name="DruckOpt" id="DruckOpt" onchange="changeprintSheet()">
+		<option value="printBericht.css">Bericht</option>
+		<option value="printZOW.css">ZOW-Tabelle</option>
+	</select>	
+
+	<button onclick="window.print();">Drucken</button>
+
+	</div>
+	
+	<div id="Bericht" style="color:black; background:#202e39" class="Bericht"></div>
+
+
+	<script src="ParameterDepV.js"></script>
+	<script src="Paralist.js"></script>
+	<script src="init.js"></script>
+	<script src="colordic.js"></script>
+	<script src="homogen.js"></script>
+	<script src="DIN.js"></script>
+	<script src="PN98.js"></script>
+	<script src="ausw.js"></script>
+	<script src="load.js"></script>
+	<script src="save.js"></script>
+	<script src="print.js"></script>
+	</main>
+
+</body>
+
+
+
+</html>
+

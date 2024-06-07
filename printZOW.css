@@ -1,0 +1,41 @@
+
+
+@media print {
+
+	.pagebreak{ page-break-before: always; 
+			} 
+
+
+	body {
+		-webkit-print-color-adjust: exact !important;
+		color:black;
+		line-break: auto;
+		zoom: 65%
+	 		}
+
+	#StammdatenHeadline {
+		display: contents;
+		}
+
+	a {	color:black;
+		}
+
+	table {
+		color:white
+		}
+
+	nav, header, button, .DontPrint, input[type='checkbox'], #Bericht, .Bericht{
+
+		display: none;
+		}
+
+
+
+
+
+@page {
+	size: 420mm 320mm}
+
+}
+
+

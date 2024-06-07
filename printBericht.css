@@ -1,0 +1,26 @@
+
+
+@media print {
+
+.pagebreak { page-break-before: always; } 
+
+
+body {
+	-webkit-print-color-adjust: exact !important;
+	color:black;
+	line-break: auto;
+	font-size: 11px;
+}
+
+
+a {	color:black;
+	}
+table {
+	color:white;
+	font-size: 11px;}
+
+nav, header, button, .DontPrint, #app, h1{
+	display: none;
+	}
+
+}
