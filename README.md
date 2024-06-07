@@ -4,7 +4,7 @@ Auf Deponien werden Abfälle durch Ablagerung beseitigt. Oberirdische Deponien g
 
 Abfälle müssen vor einer Deponierung grundsätzlich eine Deklarationsanalyse durchlaufen. Die Auswertung und Interpretation der Analyseergebnisse ist teils unübersichtlich und mühsam. Aus diesem Grund wurde die hier vorliegende ZOW-Tabelle entwickelt. Das Programm ermittelt bequem und schnell die jeweilige Güteklasse. Hierbei werden auch technisch gängige Interpretationshilfen berücksichtigt. 
 
-Für bestimmte Schadstoffe, wie BTEX, PCB, MKW C10-40, und PAK16 sind in Anhang 3 Tabelle 2 DepV keine Grenzwerte festgelegt. Das Programm greift hier auf die in Baden-Württemberg gültige [Handlungshilfe für Entscheidungen über die Ablagerbarkeit von Abfällen mit organischen Schadstoffen](https://um.baden-wuerttemberg.de/fileadmin/redaktion/m-um/intern/Dateien/Dokumente/2_Presse_und_Service/Service/Rechtsvorschriften/Arbeitshilfen/Abfall/Handlungshilfe_organische_Schadstoffe_auf_Deponien.pdf) des Umweltministeriums zurück. 
+Für bestimmte Schadstoffe, wie BTEX, PCB₇, MKW C₁₀₋₄₀, und PAK₁₆ sind in Anhang 3 Tabelle 2 DepV keine Grenzwerte festgelegt. Das Programm greift hier auf die in Baden-Württemberg gültige [Handlungshilfe für Entscheidungen über die Ablagerbarkeit von Abfällen mit organischen Schadstoffen](https://um.baden-wuerttemberg.de/fileadmin/redaktion/m-um/intern/Dateien/Dokumente/2_Presse_und_Service/Service/Rechtsvorschriften/Arbeitshilfen/Abfall/Handlungshilfe_organische_Schadstoffe_auf_Deponien.pdf) des Umweltministeriums zurück. 
 
 ## 1. Installation & Setup
 
@@ -36,7 +36,7 @@ Die vorliegende ZOW-Tabelle wendet auch gängige Interpretationsmuster wie die R
 
 Die Messwerte werden gerundet. Bei der Rundung wird analog auf die Vorgaben der Ziff. 2.9 der TA-Luft zurückgegriffen. Einstufungsrelevant ist demnach die Nachkommastelle, in der der jeweilige Grenzwert definiert wird.
 
-Beispiel: Der BM-0 Grenzwert liegt bei PAK₁₆ bei 3 mg/kg. eine Nachkommastelle ist im Gesetzestext nicht definiert. Daher wird bei PAK₁₆ auf die volle Zahl gerundet. 
+Beispiel: Der DK0 Grenzwert liegt bei PAK₁₆ bei 30 mg/kg. eine Nachkommastelle ist im Gesetzestext nicht definiert. Daher wird bei PAK₁₆ auf die volle Zahl gerundet. 
 
 ▶️ Messwert 1: 3,45 mg/kg wird abgerundet auf 3 mg/kg.  
 ▶️ Messwert 2: 3,52 mg/kg wird aufgerundet auf 4 mg/kg.
