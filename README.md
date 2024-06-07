@@ -8,8 +8,8 @@ Für bestimmte Schadstoffe, wie BTEX, PCB, MKW C10-40, und PAK16 sind in Anhang 
 
 ## 1. Installation & Setup
 
-Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download]()  
-Den vollen Release der aktuellen Version 1.0.0 finden Sie [hier]()
+Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/download/1.0.0/zow-depv-1.0.0.Setup.exe)  
+Den vollen Release der aktuellen Version 1.0.0 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/tag/1.0.0)
 
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
