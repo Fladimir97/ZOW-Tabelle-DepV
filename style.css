@@ -85,7 +85,7 @@ a {color: white
 
 details{
 	background-color: #364a5a;
-	margin:10px; 0px;}
+	margin:10px;}
 
 summary{
 	
@@ -105,7 +105,7 @@ table {
 th {	text-align: left;
 	background-color: royalblue;
 	padding: 10px 10px;
-	box-shadow: 0 3px 6px #000000030}
+	box-shadow: 0 3px 6px #00000030}
 td {	padding: 5px 5px; 
 	}
 
@@ -187,17 +187,13 @@ input {	height:25px;
 .StammdatenContainer {
 	width:100%;
 	display: grid;
-    	align-items: center;
-	// height: 350px;
+    align-items: center;
 	grid-template-columns: 1fr 1fr ;
 	grid-template-rows: 1fr  ;
 	}
 
 
-.MainOptionsLabel {
-	
-	
-	}
+
 .StammdatenDropdown{
 	margin:5px;
 	height:30px}
@@ -229,3 +225,6 @@ input {	height:25px;
 	display: none;
 		}
 
+input[type="checkbox" i] {
+		cursor:pointer
+		}
