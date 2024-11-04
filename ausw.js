@@ -1,4 +1,4 @@
-﻿function ausw(){
+function ausw(){
 
 	// 1 )Stammdaten werden erfasst;  Listen werden generiert
 	
@@ -86,8 +86,10 @@
 			CurrentErgLabel.style.backgroundColor = ""; // setzt bei leeren Feldern die Hintergrundfarbe 
 			CurrentErgLabel.textContent = "";	    // und den Textinhalt des Auswertungsfeldes zurück.
 			
+			// Prüfung ob die Probe mit ausgewertet werden soll
+			let SampleNumerCheckbox = document.getElementById(`SampleNumber${n}`).checked
 
-			if (CurrentMW != ""){
+			if ((CurrentMW != "") && (SampleNumerCheckbox)){
 
 				MWNameList.push(CurrentMWName);
 				MWList.push(CurrentMW);
@@ -263,6 +265,8 @@
 	document.getElementById("Bericht").innerHTML = Bericht ;
 	document.getElementById("Bericht").style.color = "black"; 
 	document.getElementById("Bericht").style.background = "white";  
+
+	updateCanvas()
 	}
 
 
@@ -312,4 +316,38 @@ function standardabweichung(Messwerte, Mittelwert){
 function streuung(standardabweichung, probenzahl) {
     let streuung = 1.65 * (parseFloat(standardabweichung) / Math.pow(probenzahl, 0.5))
     return streuung
+}
+
+function hideText(row){
+	//console.log(row)
+	let checked = document.getElementById(`SampleNumber${row}`).checked
+	//console.log(checked)
+	for (index in ParaList){
+		//console.log(index)
+		let inputID = `Inp${ParaList[index].Name}${row}`;
+		//console.log(inputID);
+		let InputField = document.getElementById(inputID);
+		if (checked == true){
+			InputField.style.color = "black";
+		} else if (checked == false){
+			InputField.style.color = "white" 
+		}
+	}
+	ausw();
+}
+
+
+function updateCanvas(){
+	currentCanvasParameter = document.getElementById("GO").value
+	console.log(currentCanvasParameter)
+	let ValueList = []
+	for (let i = 0; i < 12; i++){
+		let inputField = document.getElementById(`Inp${ParaList[currentCanvasParameter].Name}${i}`).value;
+		if (! (inputField == "")){
+			ValueList = ValueList.concat(inputField)
+		}
+	}
+	if (ValueList.length > 0){
+		graphicAusw();
+	}
 }
