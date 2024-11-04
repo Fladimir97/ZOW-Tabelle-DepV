@@ -19,8 +19,12 @@ async function loadData(){
 	for (let [key, data] of Object.entries(obj)) {
   		let CurrentEntry = document.getElementById(key);
 
-		if (key.includes("checkbox")){
+		if (key.includes("checkbox") || key.includes("SampleNumber")){
 			CurrentEntry.checked = data;
+			if (key.includes("SampleNumber")){
+				let num = key.replace("SampleNumber", "");
+				hideText(num);
+			}
 			} else{CurrentEntry.value  = data.replace("<", "")};
 		ausw()
 		}
