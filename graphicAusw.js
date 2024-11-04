@@ -1,4 +1,4 @@
-﻿function getPhShapes(xmin, xmax){
+function getPhShapes(xmin, xmax){
 	let legendX = ["Grenzwert", "Grenzwert", "Grenzwert", "Grenzwert", "Grenzwert"]
 	let legendY = [2, 4.75, 9.25, 13.5]
 	let legendText = [">DKIII", "DKIII", "DK0", ">DKIII"]
@@ -82,7 +82,7 @@ function getRowValues(Para, paName){
 		if (SampleName == ""){
 			SampleName = `Eingabefeld ${column}`;
 			}
-		if (! (MW == "")){
+		if ((! (MW == "")) && document.getElementById(`SampleNumber${column}`).checked){
 			resY = resY.concat(parseFloat(MW));
 			resX = resX.concat(SampleName);
 			ErrorArray = ErrorArray.concat(roundedMW - MW)
@@ -227,7 +227,7 @@ function graphicAusw(){
             		y0: grenzwerte[grenzwerte.length - 1],
             		x1: "Grenzwert", //x[x.length - 1],
 			
-            		y1: grenzwerte[grenzwerte.length - 1] * 2,
+            		y1: grenzwerte[grenzwerte.length - 1] * 10,
 
             		fillcolor: colordic[`>DK${schadstoffKlassen[schadstoffKlassen.length - 1]}`], // BUG!!!!
             		opacity: 0.5,
