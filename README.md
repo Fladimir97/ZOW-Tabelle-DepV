@@ -6,6 +6,14 @@ Abfälle müssen vor einer Deponierung grundsätzlich eine Deklarationsanalyse d
 
 Für bestimmte Schadstoffe, wie BTEX, PCB₇, MKW C₁₀₋₄₀, und PAK₁₆ sind in Anhang 3 Tabelle 2 DepV keine Grenzwerte festgelegt. Das Programm greift hier auf die in Baden-Württemberg gültige [Handlungshilfe für Entscheidungen über die Ablagerbarkeit von Abfällen mit organischen Schadstoffen](https://um.baden-wuerttemberg.de/fileadmin/redaktion/m-um/intern/Dateien/Dokumente/2_Presse_und_Service/Service/Rechtsvorschriften/Arbeitshilfen/Abfall/Handlungshilfe_organische_Schadstoffe_auf_Deponien.pdf) des Umweltministeriums zurück. 
 
+|Parameter   | Einheit  | DK0   | DKI   | DKII   | 
+|------------|----------|-------|-------|--------|
+| BTEX       | mg/kg TM | 6     | 30    | 30     | 
+| MKW C₁₀₋₄₀ | mg/kg TM | 500   | 4.000 | 8.000  |
+| PAK₁₆      | mg/kg TM | 30    | 500   | 1.000  |
+| PCB₇       | mg/kg TM | 1     | 5     | 10     |
+
+
 ## 1. Installation & Setup
 
 Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/download/1.0.1/zow-depv-1.0.1.Setup.exe)  
