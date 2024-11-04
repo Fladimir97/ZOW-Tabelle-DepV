@@ -8,8 +8,8 @@ Für bestimmte Schadstoffe, wie BTEX, PCB₇, MKW C₁₀₋₄₀, und PAK₁�
 
 ## 1. Installation & Setup
 
-Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/download/1.0.0/zow-depv-1.0.0.Setup.exe)  
-Den vollen Release der aktuellen Version 1.0.0 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/tag/1.0.0)
+Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/download/1.0.1/zow-depv-1.0.1.Setup.exe)  
+Den vollen Release der aktuellen Version 1.0.1 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-DepV/releases/tag/1.0.1)
 
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
@@ -18,7 +18,7 @@ Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://pl
 
 In die Tabelle werden die Messwerte und Stammdaten des jeweiligen Haufwerks eingegeben. Die Tabelle errechnet, ob bei dem jeweiligen Parameter Schadstoffüberschreitungen vorliegen, und gibt eine Einstufung ab. Die Messwerte werden hierbei automatisch gerundet. Außerdem wird ein Detailbericht angefertigt. 
 
-In der ersten Spalte der Tabelle ist für jeden Parameter eine Checkbox hinterlegt. Sobald diese Checkbox aktiviert ist, werden die entsprechenden Messwerte tabellarisch im Detailbericht aufgeführt. Die Messwerte sind hierbei aufsteigend sortiert. Zudem werden die Werte  Mittelwert (X̅) sowie X̅ + Streuung aufgelistet. Diese sind wichtig für die Interpretation der Messergebnisse. Weitere Informationen dazu unter Ziff. 4 Technische Hinweise.
+In der ersten Spalte der Tabelle ist für jeden Parameter eine Checkbox hinterlegt. Sobald diese Checkbox aktiviert ist, werden die entsprechenden Messwerte tabellarisch im Detailbericht aufgeführt. Die Messwerte sind hierbei aufsteigend sortiert. Zudem werden die Werte  Mittelwert (X̅) sowie X̅ + Streuung aufgelistet. Diese sind wichtig für die Interpretation der Messergebnisse. Weitere Informationen dazu unter Ziff. 3 Technische Hinweise.
 
 Weitere Funktionen der Tabelle:
 
