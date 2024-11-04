@@ -1,11 +1,11 @@
-﻿async function saveData(){
-	let inputs = document.getElementsByTagName("input") // Gibt eine Liste aller Input-Felder incl. Checkboxen wieder
+async function saveData(){
+	let inputs = document.querySelectorAll("input, textarea") // Gibt eine Liste aller Input-Felder incl. Checkboxen und Textarea Felder wieder
 	let jsonObj = {}				    // Erzeugt ein JSON-Objekt
 	for (let i = 0; i < inputs.length; i++){	    // Iteriert alle Input Felder in o.g. Liste
 		let currentInput = inputs[i]	 	    // Gibt das aktuelle Input Feld zurück
 		let value = (currentInput.value);	    // Gibt den eingetragenen Input zurück
 		let key = (currentInput.id);		    // Gibt die ID des Input feldes zurück 
-		if (key.includes("checkbox")){		    // Sonderfall Checkbox
+		if (key.includes("checkbox") || key.includes("SampleNumber")){		    // Sonderfall Checkbox 
 			value = currentInput.checked};	    // true wenn Checkbox angekreuzt wurde
 		jsonObj[key] = value};			    // JSON OBJ - KEY = ID; VALUE = USER INPUT
 	//console.log(jsonObj)
