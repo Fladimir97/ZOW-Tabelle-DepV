@@ -22,6 +22,8 @@ Den vollen Release der aktuellen Version 1.0.1 finden Sie [hier](https://github.
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
 
+Die Anwendung kann auch unter folgendem [Link](https://fladimir97.github.io/ZOW-Tabelle-DepV/) online getestet werden. Bitte beachten Sie, dass die Speicher- und Ladefunktionen nur in Chromium Browsern funktionieren.
+
 ## 2. Wie funktioniert die Tabelle?
 
 In die Tabelle werden die Messwerte und Stammdaten des jeweiligen Haufwerks eingegeben. Die Tabelle errechnet, ob bei dem jeweiligen Parameter Schadstoffüberschreitungen vorliegen, und gibt eine Einstufung ab. Die Messwerte werden hierbei automatisch gerundet. Außerdem wird ein Detailbericht angefertigt. 
@@ -69,22 +71,22 @@ Die Werte errechnen sich folgendermaßen:
 
 | Abkürzung         | Erklärung                       |
 |-------------------|---------------------------------|
-|$LP$               | Laborprobe                      | 
-|$LPi$              | Messwert der Laborprobe $i$     | 
-|$SLP$              | Standardabweichung              | 
-|$n$                | Anzahl der Laborproben          | 
-|$x̄$                | Mittelwert der Messwerte        | 
+|$\text{LP} := \{ \text{LP}_1, \dots, \text{LP}_n \}$               | Menge aller Laborproben                      | 
+|$\text{LP}_{i} \in \text{LP}$              | Messwert der Laborprobe $i$     | 
+|$\text{SLP}$              | Standardabweichung              | 
+|$n := \|\text{LP}\|$                | Anzahl der Laborproben          | 
+|$\bar{x}$                | Mittelwert der Messwerte        | 
 
 #### Bestimmung des Mittelwerts:
 ```math
-x̄  (Mittelwert) = \frac{1}{n} {\sum_{i=0}^n {LPi}}  
+\bar{x}  = \sum_{\text{LP}_{i} \in \text{LP}} \frac{\text{LP}_{i}}{n} 
 ```
 #### Bestimmung der Standardabweichung:
 ```math
-Standardabweichung (SLP) =  \sqrt{\frac{1}{n-1} {\sum_{i=0}^n (LPi -x̄)^2}}
+\text{SLP} =  \sqrt{{\sum_{\text{LP}_{i} \in \text{LP}} \frac{(\text{LP}_{i} - \bar{x})^2}{n-1}}} 
 ```
 #### Bestimmung der Streuung:
 ```math
-Streuung  = 1,65 \cdot  \frac{SLP}{\sqrt{n}}
+\text{Streuung}  = 1.65 \cdot  \frac{\text{SLP}}{\sqrt{n}}
 ```
 Das Programm ermittelt zur vereinfachten Analysebewertung automatisch für die gewünschten Parameter den Mittelwert und die Streuung.
