@@ -1,0 +1,471 @@
+/* ═══════════════════════════════════════════════════════════
+   Design Tokens
+═══════════════════════════════════════════════════════════ */
+:root {
+  --bg:           #111b27;
+  --bg-surface:   #192538;
+  --bg-elevated:  #1f3047;
+  --bg-hover:     #273d58;
+  --accent:       #3a78d2;
+  --accent-dim:   #2d5ea8;
+  --text:         #c8d8e8;
+  --text-muted:   #607d96;
+  --border:       rgba(255, 255, 255, 0.07);
+  --radius-sm:    6px;
+  --radius-md:    12px;
+  --radius-lg:    22px;
+  --shadow-sm:    0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md:    0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Base & Typography
+═══════════════════════════════════════════════════════════ */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-left: 2%;
+  padding-right: 3%;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Navigation
+═══════════════════════════════════════════════════════════ */
+nav {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  border: 1px solid var(--border);
+}
+
+nav img {
+  float: left;
+  padding-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--text);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 50px;
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+
+nav li a:hover {
+  background-color: var(--bg-hover);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-surface);
+  min-width: 160px;
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.dropdown-content a {
+  color: var(--text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bg-hover);
+  border-radius: var(--radius-md);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Details / Summary
+═══════════════════════════════════════════════════════════ */
+details {
+  background-color: var(--bg-elevated);
+  margin: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+summary {
+  background-color: var(--accent);
+  color: white;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+summary:hover {
+  background-color: var(--accent-dim);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Data Table (Eingabetabelle)
+═══════════════════════════════════════════════════════════ */
+table {
+  font-size: 13px;
+  background-color: var(--bg-surface);
+  border-collapse: collapse;
+  box-shadow: var(--shadow-md);
+}
+
+th {
+  text-align: left;
+  background-color: var(--accent);
+  color: white;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--accent-dim);
+  white-space: nowrap;
+}
+
+td {
+  padding: 5px 7px;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-elevated);
+}
+
+tr:hover {
+  background-color: var(--bg-hover);
+}
+
+.sortedtablehead :hover {
+  cursor: pointer;
+  background-color: var(--accent-dim);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Buttons
+═══════════════════════════════════════════════════════════ */
+button {
+  height: 36px;
+  min-width: 140px;
+  padding: 0 20px;
+  border-radius: var(--radius-lg);
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--accent-dim);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Inputs & Selects (allgemein)
+═══════════════════════════════════════════════════════════ */
+input {
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--bg-elevated);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  padding: 0 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(58, 120, 210, 0.2);
+}
+
+select {
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--bg-elevated);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Messwert-Eingaben (in der Parametertabelle)
+═══════════════════════════════════════════════════════════ */
+.MWEingabeLabel {
+  width: 64px;
+}
+
+.MWEingabe {
+  width: 56px;
+  height: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: right;
+  padding: 0 6px;
+}
+
+.MWEingabe:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(58, 120, 210, 0.2);
+}
+
+.MWEingabe:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* Probenbezeichnung Textarea in der Spaltenheader */
+.MPHead {
+  width: 96px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  resize: none;
+}
+
+.MPHead:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Ergebnis-Labels — Farbe kommt dynamisch per JS, hier nur Typografie */
+.ErgLabel {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 3px;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Stammdaten-Bereich
+═══════════════════════════════════════════════════════════ */
+.StammdatenContainer {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 20px;
+}
+
+.MainOptionsLabel,
+.GraphicOptions {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.StammdatenDropdown {
+  margin: 4px;
+}
+
+.Stammdatgeninput {
+  margin: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Bericht-Bereich (weißer Report-Container)
+   — Farben in .ErgLabel bleiben durch JS-Inline-Styles erhalten
+═══════════════════════════════════════════════════════════ */
+#Bericht {
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-md);
+}
+
+/* Tabellen im Bericht — dunkler Hintergrund, weißer Text */
+.BerichtTabelle {
+  color: white;
+  margin-bottom: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Diverses
+═══════════════════════════════════════════════════════════ */
+.GridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.Griditem {
+  background-color: var(--accent);
+  margin: 10px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  padding: 10px;
+}
+
+.DruckDropdown {
+  height: 36px;
+  width: 180px;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  padding: 0 14px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#Probenrechner {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  font-size: 14px;
+  background-color: var(--accent);
+}
+
+/* Stammdaten-Header ist nur für den Druck sichtbar */
+#StammdatenHeadline {
+  display: none;
+}
+
+/* Zoom wird per JS gesetzt (updateTableZoom), kein overflow nötig */
+#app {
+  padding-bottom: 8px;
+}
+
+math {
+  font-size: 20px;
+}
+
+.mySlides {
+  width: 750px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Drag & Drop (Spalten tauschen)
+═══════════════════════════════════════════════════════════ */
+th[draggable="true"] {
+  cursor: grab;
+  transition: background-color 0.15s, opacity 0.15s;
+}
+
+th[draggable="true"]:hover {
+  background-color: var(--accent-dim);
+}
+
+th.th-dragging {
+  opacity: 0.35;
+  cursor: grabbing;
+}
+
+th.th-drag-over {
+  background-color: #1a5db0;
+  outline: 2px dashed rgba(255, 255, 255, 0.6);
+  outline-offset: -3px;
+}

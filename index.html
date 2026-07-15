@@ -6,16 +6,16 @@
 	<title>Analyseauswertung - Deponieverordnung (DepV)</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">	
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
 	<link rel="stylesheet" type="text/css" href="printBericht.css" id="printsheet">
 	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
-	<script src="graphicAusw.js"></script>
+	<script src="./scripts/graphicAusw.js"></script>
 
 </head>
 
 <body  style="padding-left:2%">
-	
+
 
 	<div id="StammdatenHeadline"></div>
 	<div class="DontPrint">
@@ -60,7 +60,7 @@
 
 	<label class="GraphicOptions" for="GO">Grafische Auswertung</label>
 	<select class="StammdatenDropdown" name="GO" id="GO" onchange="graphicAusw()">
-		
+
 	</select>
 
 
@@ -85,26 +85,26 @@
 	<select class="DruckDropdown" name="DruckOpt" id="DruckOpt" onchange="changeprintSheet()">
 		<option value="printBericht.css">Bericht</option>
 		<option value="printZOW.css">ZOW-Tabelle</option>
-	</select>	
+	</select>
 
 	<button onclick="window.print();">Drucken</button>
 
 	</div>
-	
+
 	<div id="Bericht" style="color:black; background:#202e39" class="Bericht"></div>
 
 
-	<script src="ParameterDepV.js"></script>
-	<script src="Paralist.js"></script>
-	<script src="init.js"></script>
-	<script src="colordic.js"></script>
-	<script src="homogen.js"></script>
-	<script src="DIN.js"></script>
-	<script src="PN98.js"></script>
-	<script src="ausw.js"></script>
-	<script src="load.js"></script>
-	<script src="save.js"></script>
-	<script src="print.js"></script>
+	<script src="./scripts/ParameterDepV.js"></script>
+	<script src="./scripts/Paralist.js"></script>
+	<script src="./scripts/init.js"></script>
+	<script src="./scripts/colordic.js"></script>
+	<script src="./scripts/homogen.js"></script>
+	<script src="./scripts/DIN.js"></script>
+	<script src="./scripts/PN98.js"></script>
+	<script src="./scripts/ausw.js"></script>
+	<script src="./scripts/load.js"></script>
+	<script src="./scripts/save.js"></script>
+	<script src="./scripts/print.js"></script>
 	</main>
 
 </body>
@@ -112,4 +112,3 @@
 
 
 </html>
-

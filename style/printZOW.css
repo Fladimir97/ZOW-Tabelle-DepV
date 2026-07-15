@@ -1,0 +1,125 @@
+@media print {
+
+/* ─── Seite ─────────────────────────────────────────────── */
+@page {
+  size: A4 landscape;
+  margin: 8mm 6mm;
+}
+
+.pagebreak { page-break-before: always; }
+
+/* ─── Dark-Theme-Variablen überschreiben ────────────────────
+   Gleiche Logik wie printBericht.css: var()-Regeln greifen
+   auf helle Werte zurück, inline-Styles (Label-Farben) bleiben.
+────────────────────────────────────────────────────────── */
+:root {
+  --bg:          white;
+  --bg-surface:  white;
+  --bg-elevated: #f0f3f6;
+  --bg-hover:    white;
+  --accent:      #ccd5e3;
+  --accent-dim:  #b0bfcf;
+  --text:        black;
+  --text-muted:  #444;
+  --border:      #bbb;
+}
+
+/* ─── Basis ──────────────────────────────────────────────── */
+body {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  background: white !important;
+  color: black !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 7pt;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a { color: black; }
+
+/* ─── Elemente ausblenden ────────────────────────────────── */
+nav, header, button, .DontPrint, #Bericht, #myDiv, h1 {
+  display: none !important;
+}
+
+/* ─── Stammdaten-Header einblenden ───────────────────────── */
+#StammdatenHeadline {
+  display: block;
+  margin-bottom: 4mm;
+}
+
+/* ─── Scrollbereich aufheben ─────────────────────────────── */
+#app {
+  overflow: visible !important;
+  zoom: 1 !important;     /* JS-Zoom für Print zurücksetzen */
+}
+
+/* ─── Tabelle passt sich automatisch an die Seitenbreite an  */
+table {
+  font-size: 7pt;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;    /* gleichmäßige Spaltenverteilung */
+  box-shadow: none !important;
+}
+
+th {
+  color: black;
+  border: 0.5pt solid #888;
+  font-size: 6pt;
+  padding: 2pt 1pt;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+td {
+  color: black;
+  border: 0.5pt solid #ccc;
+  padding: 1pt 2pt;
+  overflow: hidden;
+}
+
+/* ─── Mess-Inputs als reiner Text ────────────────────────── */
+.MWEingabe {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: black !important;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 6pt;
+  width: 100%;
+  padding: 0;
+  text-align: right;
+}
+
+.MPHead {
+  background: transparent !important;
+  border: none !important;
+  color: black !important;
+  font-size: 6pt;
+  width: 100%;
+  padding: 0;
+}
+
+/* ─── Ergebnis-Labels: Farbe bleibt ──────────────────────── */
+.ErgLabel {
+  font-size: 5.5pt;
+  padding: 1pt;
+  border-radius: 2pt;
+  text-align: center;
+}
+
+td[style*="background-color"] {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color: white;
+}
+
+/* ─── Checkboxen ausblenden ──────────────────────────────── */
+input[type="checkbox"] {
+  display: none;
+}
+
+}

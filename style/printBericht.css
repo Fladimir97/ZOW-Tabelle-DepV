@@ -1,0 +1,111 @@
+@media print {
+
+/* ─── Seite ─────────────────────────────────────────────── */
+@page {
+  size: A4 portrait;
+  margin: 15mm 12mm;
+}
+
+.pagebreak { page-break-before: always; }
+
+/* ─── Dark-Theme-Variablen für den Druck überschreiben ──────
+   Alle var()-Regeln aus style.css greifen automatisch auf
+   die hellen Werte zurück. Inline-Styles (Ergebnis-Label-
+   Farben) werden dabei NICHT überschrieben, da kein
+   !important auf td/tr verwendet wird.
+────────────────────────────────────────────────────────── */
+:root {
+  --bg:          white;
+  --bg-surface:  white;
+  --bg-elevated: #f0f3f6;
+  --bg-hover:    white;
+  --accent:      #ccd5e3;
+  --accent-dim:  #b0bfcf;
+  --text:        black;
+  --text-muted:  #444;
+  --border:      #bbb;
+}
+
+/* ─── Basis ──────────────────────────────────────────────── */
+body {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  background: white !important;
+  color: black !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 9pt;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a { color: black; }
+
+h2 {
+  font-size: 12pt;
+  font-weight: 600;
+  color: black;
+  border-bottom: 0.5pt solid #aaa;
+  margin: 10pt 0 5pt;
+}
+
+h3 {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 8pt 0 3pt;
+}
+
+math { font-size: 9pt; }
+
+/* ─── Elemente ausblenden ────────────────────────────────── */
+nav, header, button, .DontPrint, #app, h1, #myDiv, #StammdatenHeadline {
+  display: none !important;
+}
+
+/* ─── Stammdaten-Header einblenden ───────────────────────── */
+#StammdatenHeadline {
+  display: block;
+}
+
+/* ─── Bericht-Container ──────────────────────────────────── */
+#Bericht {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ─── Tabellen ────────────────────────────────────────────── */
+table {
+  font-size: 8pt;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+/* th nutzt var(--accent) → wird oben zu #ccd5e3 (hellgrau) */
+th {
+  color: black;           /* var() liefert kein color, muss explizit sein */
+  border: 0.5pt solid #888;
+  font-size: 8pt;
+  padding: 4pt 5pt;
+}
+
+td {
+  color: black;
+  border: 0.5pt solid #ccc;
+  padding: 3pt 5pt;
+  /* kein background hier — var(--bg-surface/elevated) greifen */
+}
+
+/* ─── Ergebnis-Labels: Farbe bleibt (kein !important auf bg) */
+/* inline style="background-color:..." aus JS gewinnt automatisch */
+td[style*="background-color"] {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color: white;
+}
+
+}
