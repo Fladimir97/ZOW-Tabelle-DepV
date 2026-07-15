@@ -74,7 +74,7 @@ function getRowValues(Para, paName){
 	let resY = []
 	let resX = []
 	let ErrorArray = []
-	for(let column = 0; column < 12; column++){
+	for(let column = 0; column < currentSamples; column++){
 		let MW = document.getElementById(`Inp${paName}${column}`).value;
 		let roundedMW = parseFloat(MW).toFixed(Para.Rst)
 		let SampleName = document.getElementById(`SampleName${column}`).value;

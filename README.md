@@ -1,3 +1,15 @@
+# NEU - Jetzt online Testen
+
+**Die Anwendung kann auch unter folgendem [Link](https://fladimir97.github.io/ZOW-Tabelle-DepV/) online getestet werden. Bitte beachten Sie, dass die Speicher- und Ladefunktionen nur in Chromium Browsern (Chrome, Edge, Brave, etc.) funktionieren.**
+
+Es stehen online folgende **neue Funktionen** zur Verfügung:
+
+- Die Tabelle lässt sich nun dynamisch erweitern. Es können bis zu 15 Spalten für Mischproben hinzugefügt werden. Die Reihenfolge der Spalten lassen sich per drag and drop vertauschen.
+- Die Eingabedaten werden im Browser gecacht. Die Daten gehen beim Schließen des Browser-Fensters nicht mehr verloren.
+- Dieverse Code-Optimierungen und optische Verbesserungen an der GUI
+
+
+
 # ZOW-Tabelle für Abfälle nach den Vorgaben der Deponieverordnung - DepV ♻️
 
 Auf Deponien werden Abfälle durch Ablagerung beseitigt. Oberirdische Deponien gliedern sich in die Klassen DK0 bis DKIII. Die für die Deponieklassen festgelegten Schadstoffgrenzwerte sind in Anhang 3 Tabelle 2 der [Deponieverordnung (DepV)](https://www.gesetze-im-internet.de/depv_2009/anhang_3.html) geregelt.

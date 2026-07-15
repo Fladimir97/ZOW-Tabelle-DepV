@@ -16,10 +16,19 @@
 
 <body  style="padding-left:2%">
 
+	<nav id="nav">
+	</nav>
+
+	<header>
+		<p>
+			<h1>ZOW-Tabelle nach den Vorgaben der Deponieverordnung (DepV)</h1>
+		</p>
+	</header>
+
+	<main>
 
 	<div id="StammdatenHeadline"></div>
 	<div class="DontPrint">
-	<h1>ZOW-Tabelle nach den Vorgaben der Deponieverordnung (DepV)</h1>
 	<h2>Stammdaten</h2>
 
 
@@ -57,6 +66,11 @@
 
 	</select>
 
+	<label class="MainOptionsLabel" for="SampleCount">Anzahl Laborproben (max. 15)</label>
+	<div>
+		<input class="Stammdatgeninput" id="SampleCount" type="number" min="1" max="15" value="12">
+		<button onclick="resizeTable(parseInt(document.getElementById('SampleCount').value))">Tabelle anpassen</button>
+	</div>
 
 	<label class="GraphicOptions" for="GO">Grafische Auswertung</label>
 	<select class="StammdatenDropdown" name="GO" id="GO" onchange="graphicAusw()">
@@ -76,7 +90,7 @@
 
 
 	<div class="DontPrint"> <br>
-	<button onclick="ausw()">Auswertung starten</button>
+	<button onclick="reset()">Zurücksetzen</button>
 
 	<button onclick="saveData()">Speichern</button>
 
@@ -97,14 +111,15 @@
 	<script src="./scripts/ParameterDepV.js"></script>
 	<script src="./scripts/Paralist.js"></script>
 	<script src="./scripts/init.js"></script>
-	<script src="./scripts/colordic.js"></script>
 	<script src="./scripts/homogen.js"></script>
-	<script src="./scripts/DIN.js"></script>
 	<script src="./scripts/PN98.js"></script>
-	<script src="./scripts/ausw.js"></script>
-	<script src="./scripts/load.js"></script>
-	<script src="./scripts/save.js"></script>
+	<script src="./scripts/DIN.js"></script>
+	<script src="./scripts/colordic.js"></script>
 	<script src="./scripts/print.js"></script>
+	<script src="./scripts/save.js"></script>
+	<script src="./scripts/load.js"></script>
+	<script src="./scripts/ausw.js"></script>
+
 	</main>
 
 </body>
